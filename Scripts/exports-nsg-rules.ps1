@@ -24,6 +24,9 @@
     .NOTES  
         Author: Kevin Young
         Date: 12/16/2021
+    .NOTES
+    May need to Connect Account, and be sure to set Context(line35), or may get all data you have perms too.
+    (line32,line34)
 #>
 #  Connect-AzAccount
 $SubID = '<SubscritptionID>'

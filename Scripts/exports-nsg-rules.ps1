@@ -1,13 +1,34 @@
 <#
-This is pretty easy
-This searches for all NSGs in a given subscription
-Outputs all the security rule configuration into individual file outputs
-This uses the Azure Az module
+    .SYNOPSIS
+        Export NSG rules from ALL NSGs in a given subscription. 
+    
+    .DESCRIPTION
+        Export NSG rules from ALL NSGs in a given subscription.  Outputs all the security rule configuration into individual file outputs. This uses the Azure Az module.
+        Commented out sections are for deleting and importing nsg rules from CSV. 
+    
+    .PARAMETER PlaceHolder
+        PlaceHolder.
+              
+    .INPUTS
+        Description of objects that can be piped to the script.
+
+    .OUTPUTS
+        Description of objects that are output by the script.
+    
+    .EXAMPLE
+        Example of how to run the script.
+    
+    .LINK
+        Links to further documentation.
+    
+    .NOTES  
+        Author: Kevin Young
+        Date: 12/16/2021
 #>
 #  Connect-AzAccount
 $SubID = '<SubscritptionID>'
 $nsgs = Get-AzNetworkSecurityGroup
-$exportPath = 'C:\Users\P12060D\OneDrive - Ceridian HCM Inc\Azure\scripts\Exports'
+$exportPath = '<C:\somewhere>'
 Set-AzContext -Subscription $SubID
 Foreach ($nsg in $nsgs){
 New-Item -ItemType file -Path "$exportPath\$($nsg.Name).csv" -Force

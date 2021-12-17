@@ -1,0 +1,259 @@
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMWNKkxdxkOO0XNWMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMXkl;.........';coOXWMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMNk;.................,dXMMMMMMMMMMMMMMM
+NNMMMMMWMMMWd.....................oNMMMMMMMMMMMMMM
+KdONMMKKMMMK;.....................;0MMMMMMMMMMMMMM
+WOccdd:dNMMK;.....................,OMMMMMMMMMMMMMM
+MMKo'..'kWMNo.....;cc;,:::;;;;,,c::OMMMMMMMMMMMMMM
+MMMW0o;.,o0Kk,....lko,,lxxxddl,'lol0MMMMMMMMMMMMMM
+MMMMMMN0xddddc'...'::,',;:cccccldldKNNNNNNNNNNNNNW
+MMMMMMMMMMMMMWKkl'......cxkOOOOOOOOO000000000000KN
+MMMMMMMMMMMMMMW0l......;x00OOOOOOOOOOOOOOOOOOOO0XM
+MMMMMMMMMMMMMNx'......'oOOOOOOOOOOOOkkOOOOOOOO0KWM
+MMMMMMMMMMMMXl........cOOOOOOOOOOOOOOOOOOOOOOOKNMM
+MMMMMMMMMWN0l'....':;ckOOOOOOOOOOOOOOOOOOOOOO0XMMM
+MMMMMMW0dc;..'::coxkkkO0OOOOOOOOOOOOOOOOOOO0OKWMMM
+MMMMMXl......,clccclllllllllllllllcllllllox0XNMMMM
+MMMMWd.....................................cKMMMMM
+MMMMW0:....................................:0MMMMM
+MMMMMMN0kdlc:;,,,'.............'',,;;:clox0NMMMMMM
+MMMMMMMMMMMWWNNNX0c...........;kXXNNWWWMMMMMMMMMMM
+MMMMMMMMMMMMMMMMXl...,lkOko:'..:0MMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMXxox0NWMMMMNKkddKMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
+
+For example:
+
+To download an entire HTML website, you only need to type:
+
+wget -r domain.com
+
+Now if you were to do the same on a GUI, you'd have to save each page one by one.
+
+This is only one of many examples as to how powerful the command line is. There are many other tasks on Linux that can only be done from the command line.
+
+In short:
+
+Knowing your way around a command line will make you a more efficient and effective programmer. You'll be able to get shit done faster by automating repetitive tasks. ​
+
+​Plus, you'll look like a complete bad ass in the process.
+
+
+
+Use this cheat sheet as a reference in case you forget how to do certain tasks from the command-line. And trust me, it happens.
+
+If you're new to Unix/Linux operating systems, this cheat sheet also includes the fundamental linux commands such as jumping from one directory to another, as well as more technical stuff like managing processes.
+
+NOTES
+Everything inside "<>" should be replaced with a name of a file, directory or command.
+
+Bash = A popular command-line used in Unix/Linux operating systems.
+dir = directory/folder
+file = file name & type (eg. notes.txt)
+cmd = command (eg. mkdir, ls, curl, etc)
+location = path/destination (eg. /home/Desktop)
+
+Quick Navigation
+Keyboard Shortcuts
+File & Directory Manipulation
+System & User Information
+Installing & Upgrading Packages
+Processes & Job Management
+Networking Utilities
+Keyboard Shortcuts
+CTRL + L	Clear terminal screen
+
+CTRL + D	Log out of current session
+
+CTRL + C	Stop (halt) currently running command/processes
+
+CTRL + Z	Suspend (pause) currently running command/processes
+
+CTRL + W	Delete the last word/argument
+
+CTRL + E	Jump (skip) to the very LAST line
+
+CTRL + A	Jump (skip) to the very FIRST line
+
+CTRL + F	Move cursor one letter forward
+
+CTRL + B	Move cursor one letter backward
+
+CTRL + U	Cut (copy) everything BEFORE the cursor
+
+CTRL + K	Cut (copy) everything AFTER the cursor
+
+CTRL + Y	Paste previously copied text
+
+clear	Clear terminal screen
+
+reset	Fix display errors
+
+exit	Exit (log out) current session
+
+tab		Auto-complete
+
+!!		Repeat last command
+
+sudo !!		Repeat last command as sudo (admin/root) user
+
+man <cmd>
+
+Read the manual page of a command
+
+which <cmd>
+
+Locate the path name of a command
+
+File & Directory Manipulation
+pwd: Display path of current directory you’re in
+
+​ls: List all files and folders in the current directory
+ls -la: List detailed list of files and folders, including hidden ones
+
+Change to a specific directory
+cd: Change to home directory
+cd /user/Desktop: Change to a specific directory called Desktop
+cd .. : Move back a directory
+
+Create a directory/folder
+mkdir <dir>: Create a new directory
+mkdir /home/Desktop/dir: Create a directory in a specific location
+
+Create and edit files
+touch <file>: Create an empty file
+nano <file>: Edit an existing file or create it if it doesn’t exist.
+Alternatives to nano text editor: vim, emacs
+
+Copy, move and rename files and directories
+cp <file1> <file2>: Create a copy of a file
+cp -r <dir1> <dir2>: Create a copy of a directory and everything in it
+cp <file> /home/Desktop/file2: Create a copy of a file in a different directory and name it file2.
+
+mv <file> /home/Desktop: Move a file to a specific directory (overwrites any existing file with the same name)
+mv <dir> /home/Desktop: Move a directory to another location
+mv <dir1> <dir2>: Rename a file OR directory (dir1 -> dir2)
+
+Delete files
+rm <file>: Delete a file
+rm -f <file>: Force delete a file
+Careful now..
+
+rm -r <dir>: Delete a directory and its contents
+rm -rf <dir>: Force delete a directory and its contents
+Careful when using this command as it will delete everything inside the directory
+
+Output and analyze files
+cat <file>: Display/output the contents of a file
+less <file>: Display the contents of a file with scroll (paginate) ability (press q to quit)
+
+head <file>: Display the first ten lines in a file
+head -20 <file>: Display the first 20 lines in a file
+tail <file>: Display the last ten lines in a file
+tail -20 <file>: Display the last 20 lines in a file
+
+diff <file1> <file2>: Check the difference between two files (file1 and file2)
+
+System & User Information
+cal: Display monthly calendar
+
+date: Check date and time
+uptime: Check system uptime and currently logged in users
+
+uname -a: Display system information.
+dmesg: Display kernel ring buffer
+
+poweroff: Shutdown system
+reboot: Reboot system
+
+View disk and memory usage
+df -h: Display disk space usage
+fdisk -l: List disk partition tables
+free: Display memory usage
+
+cat /proc/meminfo: Display memory information
+cat /proc/cpuinfo: Display cpu information
+
+View user information
+whoami: Output your username
+w: Check who’s online
+
+history: View a list of your previously executed commands
+
+View last logged in users and information
+last: Display last login info of users
+last <user>: Display last login info of a specific user
+
+finger <user>: Display user information
+
+Installing & Upgrading Packages
+Search for packages
+apt-cache pkgnames: List all available packages
+apt search <name>: Search for a package and its description
+apt show <name>: Check detailed description of a package
+
+Install packages
+apt-get install <name>: Install a package
+apt-get install <name1> <name2>: Install multiple packages
+
+Update, upgrade & cleanup
+apt-get update: Update list of available packages
+apt-get upgrade: Install the newest version of available packages
+apt-get dist-upgrade: Force upgrade packages.
+apt-get autoremove: Remove installed packages that are no longer needed
+apt-get clean: Free up disk space by removing archived packages
+
+Delete packages
+apt-get remove: Uninstall a package
+apt-get remove --purge: Uninstall a package and remove its configuration files
+
+Processes & Job Management
+top: Display running processes & system usage in real-time.
+
+ps: Display currently running processes
+ps -u <user>: Display currently running processes of a user
+
+kill <PID>: Kill a processes by PID #.
+killall <processes>: Kill all processes with specified name.
+
+Start, stop, resume jobs
+jobs: Display the status of current jobs
+jobs -l: Display detailed info about each job
+jobs -r: Display only running jobs
+
+bg: View stopped background jobs or resume job in the background
+fg: Resume recent job in the foreground
+fg <job>: Bring specific job to the foreground.
+
+Networking Utilities
+ping <host>: Ping a host
+whois <domain/IP>: Get whois information about a domain or IP.
+dig <domain/IP>: Get DNS information
+nslookup: <NS>: Get nameserver information
+
+ifconfig: Configure/display network interfaces
+iwconfig: Configure/display wireless network interfaces
+
+netstat -r: Display kernel IP routing tables
+netstat -antp: Check for established and listening ports/connections​
+
+arp -a: Display ARP cache tables for all interfaces​
+
+Secure File Transfer (SCP)
+Transfer files FROM the local system TO a remote host (Local > Remote)
+scp /path/to/file user@host:/path/to/dest
+
+Transfer files FROM a remote host TO the local system (Remote > Local)
+scp user@host:/path/to/file /path/to/dest
+
+Transfer directories and everything within it
+scp -r /path/to/dir user@host:/path/to/dest
+
+Transfer all files that match a specific filetype
+scp /path/to/*.txt user@host:/path/to/dest
+
+Transfer local public SSH public key to remote host
+cat ~/.ssh/id_rsa.pub | ssh user@host 'cat >> .ssh/authorized_keys'

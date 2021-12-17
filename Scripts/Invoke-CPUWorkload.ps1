@@ -23,6 +23,8 @@
     This will execute a number of worker threads equal to 50% of the number of cores on the machine. On a 
     16-core machine, this will result in spawning 8 worker threads.
 .NOTES
+
+Disclaimer: This script is provided "AS IS" with no warranties.
 #>
 
 [cmdletbinding(

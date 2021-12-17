@@ -25,6 +25,7 @@
         Author: Kevin Young
         Date: 12/16/2021
         Version: 2.0
+        Disclaimer: This script is provided "AS IS" with no warranties.
     .NOTES
     May need to Connect Account, and be sure to set Context(line35), or may get all data you have perms too.
     ($exportpath and $SubID) Required Updates
